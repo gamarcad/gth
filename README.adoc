@@ -3,7 +3,7 @@
 GTH is lightweight, cross-platform and easy-to-use desktop application designed to help the comprehension of the
 guitar theory, including gammas, chords but also degrees.
 
-
+[link=https://github.com/gamarcad/gth/blob/master/images/gth-screenshot.png?raw=true]
 
 In practice, this application allows to:
 
