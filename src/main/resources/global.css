@@ -1,0 +1,7 @@
+#main-anchor {
+    padding: 8px;
+    -fx-fill: rgba(255,255,255,0.66);
+}
+.text {
+    -fx-fill: rgb(.8, .8, .8);
+}
