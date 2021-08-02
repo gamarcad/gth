@@ -1,8 +1,10 @@
 package view;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.text.Text;
 import model.*;
 import view.converters.AccordStringConverter;
 import view.converters.IntervalStringConverter;
@@ -11,9 +13,10 @@ import view.converters.NoteStringConverter;
 import view.wrappers.GammaDescriptionGroupWrapper;
 import view.wrappers.GuitarNeckGroupWrapper;
 
+import java.net.URL;
 import java.util.*;
 
-public class MainController {
+public class GTHController implements Initializable {
     @FXML
     private Group guitarGroup;
 
@@ -34,6 +37,22 @@ public class MainController {
     private Group groupGammaDescription;
 
 
+    @FXML
+    private Text textChordsTitle;
+
+    @FXML
+    private Text textFundamental;
+
+    @FXML
+    private Text textInterval;
+
+    @FXML
+    private Text textMode;
+
+    @FXML
+    private Text textChord;
+
+
     private GuitarNeckGroupWrapper guitarNeckGroupWrapper;
     private GammaDescriptionGroupWrapper gammaDescriptionGroupWrapper;
 
@@ -44,8 +63,15 @@ public class MainController {
     private Optional<AccordType> selectedAccordType;
 
 
-    @FXML
-    public void initialize() {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // initialize strings depending on the seleceted bundle
+        textChordsTitle.setText(resourceBundle.getString("nav.chords"));
+        textFundamental.setText(resourceBundle.getString("chords.fundamental"));
+        textInterval.setText(resourceBundle.getString("chords.interval"));
+        textMode.setText(resourceBundle.getString("chords.mode"));
+        textChord.setText(resourceBundle.getString("chords.chord"));
+
         // initialize fundamental choice box
         choiceBoxFundamental.getItems().addAll(Note.values());
         choiceBoxFundamental.getSelectionModel().selectFirst();

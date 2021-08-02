@@ -5,3 +5,18 @@
 .text {
     -fx-fill: rgb(.8, .8, .8);
 }
+
+.fundamentalChoiceBox {
+    -fx-background-color: #9701FF;
+    -fx-text-color: #ffff;
+
+
+}
+
+#leftPanel {
+    -fx-background-color: #9701FF;
+}
+
+#leftPanel text {
+    -fx-color: white;
+}
